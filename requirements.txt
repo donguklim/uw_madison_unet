@@ -24,16 +24,19 @@ backcall==0.2.0
     # via ipython
 beautifulsoup4==4.11.1
     # via nbconvert
-bleach==5.0.0
+bleach==5.0.1
     # via nbconvert
 certifi==2022.6.15
     # via requests
 cffi==1.15.0
     # via argon2-cffi-bindings
-charset-normalizer==2.0.12
+charset-normalizer==2.1.0
     # via requests
+click==8.1.3
+    # via torchio
 colorama==0.4.5
     # via
+    #   click
     #   ipython
     #   tqdm
 cycler==0.11.0
@@ -44,6 +47,8 @@ decorator==5.1.1
     # via ipython
 defusedxml==0.7.1
     # via nbconvert
+deprecated==1.2.13
+    # via torchio
 entrypoints==0.4
     # via jupyter-client
 executing==0.8.3
@@ -52,6 +57,8 @@ fastjsonschema==2.15.3
     # via nbformat
 fonttools==4.33.3
     # via matplotlib
+humanize==4.2.3
+    # via torchio
 idna==3.3
     # via
     #   anyio
@@ -75,7 +82,7 @@ jinja2==3.1.2
     #   notebook
 json5==0.9.8
     # via jupyterlab-server
-jsonschema==4.6.0
+jsonschema==4.6.1
     # via
     #   jupyterlab-server
     #   nbformat
@@ -117,11 +124,11 @@ matplotlib-inline==0.1.3
     # via
     #   ipykernel
     #   ipython
-mistune==2.0.2
+mistune==2.0.3
     # via nbconvert
 nbclassic==0.3.7
     # via jupyterlab
-nbclient==0.6.4
+nbclient==0.6.5
     # via nbconvert
 nbconvert==7.0.0rc2
     # via
@@ -139,6 +146,8 @@ nest-asyncio==1.5.5
     #   jupyter-client
     #   nbclient
     #   notebook
+nibabel==4.0.1
+    # via torchio
 notebook==6.4.12
     # via nbclassic
 notebook-shim==0.1.0
@@ -146,8 +155,11 @@ notebook-shim==0.1.0
 numpy==1.23.0
     # via
     #   matplotlib
+    #   nibabel
     #   opencv-python
     #   pandas
+    #   scipy
+    #   torchio
     #   torchvision
 opencv-python==4.6.0.66
     # via -r requirements.in
@@ -159,6 +171,7 @@ packaging==21.3
     #   jupyterlab-server
     #   matplotlib
     #   nbconvert
+    #   nibabel
 pandas==1.4.3
     # via -r requirements.in
 pandocfilters==1.5.0
@@ -177,7 +190,7 @@ prometheus-client==0.14.1
     # via
     #   jupyter-server
     #   notebook
-prompt-toolkit==3.0.29
+prompt-toolkit==3.0.30
     # via ipython
 psutil==5.9.1
     # via ipykernel
@@ -219,14 +232,18 @@ pyzmq==23.2.0
     #   jupyter-client
     #   jupyter-server
     #   notebook
-requests==2.28.0
+requests==2.28.1
     # via
     #   jupyterlab-server
     #   torchvision
+scipy==1.9.0rc1
+    # via torchio
 send2trash==1.8.1b0
     # via
     #   jupyter-server
     #   notebook
+simpleitk==2.1.1.2
+    # via torchio
 six==1.16.0
     # via
     #   asttokens
@@ -244,14 +261,17 @@ terminado==0.15.0
     #   notebook
 tinycss2==1.1.1
     # via nbconvert
-torch==1.13.0.dev20220626+cu113
+torch==1.13.0.dev20220630+cu113
     # via
     #   -r requirements.in
     #   torchaudio
+    #   torchio
     #   torchvision
-torchaudio==0.13.0.dev20220626+cu113
+torchaudio==0.13.0.dev20220630+cu113
     # via -r requirements.in
-torchvision==0.14.0.dev20220626+cu113
+torchio==0.18.80
+    # via -r requirements.in
+torchvision==0.14.0.dev20220630+cu113
     # via -r requirements.in
 tornado==6.2b2
     # via
@@ -262,7 +282,9 @@ tornado==6.2b2
     #   notebook
     #   terminado
 tqdm==4.64.0
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   torchio
 traitlets==5.3.0
     # via
     #   ipykernel
@@ -289,6 +311,8 @@ webencodings==0.5.1
     #   tinycss2
 websocket-client==1.3.3
     # via jupyter-server
+wrapt==1.14.1
+    # via deprecated
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
